@@ -6,4 +6,18 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FFMediaToolkit" Version="3.4.0" />
+    <PackageReference Include="FFmpeg.Nightly" Version="20200831.1.0" />
+    <PackageReference Include="FFMpegCore" Version="3.3.0" />
+  </ItemGroup>
+
 </Project>
