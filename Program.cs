@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ExceptionServices;
+using System.Security;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +14,8 @@ namespace EasyVideoRemover
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+        //[HandleProcessCorruptedStateExceptions]
+        //[SecurityCritical]
         static void Main()
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);

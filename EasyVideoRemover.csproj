@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
@@ -19,5 +19,6 @@
     <PackageReference Include="FFmpeg.Nightly" Version="20200831.1.0" />
     <PackageReference Include="FFMpegCore" Version="3.3.0" />
   </ItemGroup>
+
 
 </Project>

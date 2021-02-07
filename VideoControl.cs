@@ -43,24 +43,30 @@ namespace EasyVideoRemover
 
             PictureBoxes.ForEach(x => x.SizeMode = PictureBoxSizeMode.Zoom);
 
-            using (var file = MediaFile.Open(FilePath))
+            try
             {
-                int framesNumber = file.Video.Info.NumberOfFrames ?? -1;
-                if (framesNumber > 0)
+                using (var file = MediaFile.Open(FilePath))
                 {
-                    for (int section = 0, currentFrame = 0; section < PictureBoxes.Count; section++, currentFrame++)
+                    int framesNumber = file.Video.Info.NumberOfFrames ?? -1;
+                    if (framesNumber > 0)
                     {
-                        for (; currentFrame < framesNumber / (PictureBoxes.Count + 1) * (section + 1); currentFrame++)
-                            file.Video.TryReadNextFrame(out _);
+                        for (int section = 0, currentFrame = 0; section < PictureBoxes.Count; section++, currentFrame++)
+                        {
+                            for (; currentFrame < framesNumber / (PictureBoxes.Count + 1) * (section + 1); currentFrame++)
+                                file.Video.TryReadNextFrame(out _);
 
-                        if (file.Video.TryReadNextFrame(out var imageData))
-                            try
-                            {
-                                PictureBoxes[section].Image = ToBitmap(imageData);
-                            }
-                            catch { }
+                            if (file.Video.TryReadNextFrame(out var imageData))
+                                try
+                                {
+                                    PictureBoxes[section].Image = ToBitmap(imageData);
+                                }
+                                catch { }
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
             }
         }
 
