@@ -53,9 +53,9 @@ namespace EasyVideoRemover
                         for (int section = 0, currentFrame = 0; section < PictureBoxes.Count; section++, currentFrame++)
                         {
                             for (; currentFrame < framesNumber / (PictureBoxes.Count + 1) * (section + 1); currentFrame++)
-                                file.Video.TryReadNextFrame(out _);
+                                file.Video.TryGetNextFrame(out _);
 
-                            if (file.Video.TryReadNextFrame(out var imageData))
+                            if (file.Video.TryGetNextFrame(out var imageData))
                                 try
                                 {
                                     PictureBoxes[section].Image = ToBitmap(imageData);

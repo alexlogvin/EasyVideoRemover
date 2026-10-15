@@ -55,7 +55,7 @@ namespace EasyVideoRemover
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            FFMediaToolkit.FFmpegLoader.FFmpegPath = @"F:\Work\Repositories\EasyVideoRemover\";
+            FFMediaToolkit.FFmpegLoader.FFmpegPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "runtimes", "win-x64", "native");
         }
     }
 }

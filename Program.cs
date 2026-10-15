@@ -21,6 +21,7 @@ namespace EasyVideoRemover
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetDefaultVisualStylesMode(VisualStylesMode.Net11);
             Application.Run(new MainForm());
         }
     }

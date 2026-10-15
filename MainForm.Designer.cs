@@ -29,63 +29,68 @@ namespace EasyVideoRemover
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFolderChooser = new System.Windows.Forms.Button();
-            this.lblChoosenFolder = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.folderChooser = new System.Windows.Forms.FolderBrowserDialog();
-            this.panelVideos = new System.Windows.Forms.FlowLayoutPanel();
-            this.SuspendLayout();
+            btnFolderChooser = new System.Windows.Forms.Button();
+            lblChoosenFolder = new System.Windows.Forms.Label();
+            btnDelete = new System.Windows.Forms.Button();
+            folderChooser = new System.Windows.Forms.FolderBrowserDialog();
+            panelVideos = new System.Windows.Forms.FlowLayoutPanel();
+            SuspendLayout();
             // 
             // btnFolderChooser
             // 
-            this.btnFolderChooser.Location = new System.Drawing.Point(13, 13);
-            this.btnFolderChooser.Name = "btnFolderChooser";
-            this.btnFolderChooser.Size = new System.Drawing.Size(150, 34);
-            this.btnFolderChooser.TabIndex = 0;
-            this.btnFolderChooser.Text = "Chose folder...";
-            this.btnFolderChooser.UseVisualStyleBackColor = true;
-            this.btnFolderChooser.Click += new System.EventHandler(this.btnFolderChooser_Click);
+            btnFolderChooser.Location = new System.Drawing.Point(9, 8);
+            btnFolderChooser.Margin = new System.Windows.Forms.Padding(2);
+            btnFolderChooser.Name = "btnFolderChooser";
+            btnFolderChooser.Size = new System.Drawing.Size(105, 31);
+            btnFolderChooser.TabIndex = 0;
+            btnFolderChooser.Text = "Chose folder...";
+            btnFolderChooser.UseVisualStyleBackColor = true;
+            btnFolderChooser.Click += btnFolderChooser_Click;
             // 
             // lblChoosenFolder
             // 
-            this.lblChoosenFolder.AutoSize = true;
-            this.lblChoosenFolder.Location = new System.Drawing.Point(169, 18);
-            this.lblChoosenFolder.Name = "lblChoosenFolder";
-            this.lblChoosenFolder.Size = new System.Drawing.Size(166, 25);
-            this.lblChoosenFolder.TabIndex = 1;
-            this.lblChoosenFolder.Text = "Folder not choosen";
+            lblChoosenFolder.AutoSize = true;
+            lblChoosenFolder.Location = new System.Drawing.Point(118, 16);
+            lblChoosenFolder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            lblChoosenFolder.Name = "lblChoosenFolder";
+            lblChoosenFolder.Size = new System.Drawing.Size(109, 15);
+            lblChoosenFolder.TabIndex = 1;
+            lblChoosenFolder.Text = "Folder not choosen";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(1230, 1268);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(259, 64);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete marked videos";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Location = new System.Drawing.Point(861, 761);
+            btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new System.Drawing.Size(181, 38);
+            btnDelete.TabIndex = 2;
+            btnDelete.Text = "Delete marked videos";
+            btnDelete.UseVisualStyleBackColor = true;
             // 
             // panelVideos
             // 
-            this.panelVideos.AutoScroll = true;
-            this.panelVideos.Location = new System.Drawing.Point(0, 53);
-            this.panelVideos.Name = "panelVideos";
-            this.panelVideos.Size = new System.Drawing.Size(1500, 1209);
-            this.panelVideos.TabIndex = 4;
+            panelVideos.AutoScroll = true;
+            panelVideos.Location = new System.Drawing.Point(0, 43);
+            panelVideos.Margin = new System.Windows.Forms.Padding(2);
+            panelVideos.Name = "panelVideos";
+            panelVideos.Size = new System.Drawing.Size(1050, 714);
+            panelVideos.TabIndex = 4;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1501, 1344);
-            this.Controls.Add(this.panelVideos);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.lblChoosenFolder);
-            this.Controls.Add(this.btnFolderChooser);
-            this.Name = "MainForm";
-            this.Text = "Easy Video Remover";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1051, 806);
+            Controls.Add(panelVideos);
+            Controls.Add(btnDelete);
+            Controls.Add(lblChoosenFolder);
+            Controls.Add(btnFolderChooser);
+            Margin = new System.Windows.Forms.Padding(2);
+            Name = "MainForm";
+            Text = "Easy Video Remover";
+            Load += MainForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

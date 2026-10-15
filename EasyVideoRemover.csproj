@@ -1,24 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net11.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FFMediaToolkit" Version="3.4.0" />
-    <PackageReference Include="FFmpeg.Nightly" Version="20200831.1.0" />
-    <PackageReference Include="FFMpegCore" Version="3.3.0" />
+    <PackageReference Include="FFMediaToolkit" Version="4.8.1" />
+    <PackageReference Include="FFmpeg.GPL" Version="20250325.1.0" />
+    <PackageReference Include="FFMpegCore" Version="5.5.0" />
   </ItemGroup>
-
 
 </Project>
